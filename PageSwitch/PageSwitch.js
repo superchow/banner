@@ -63,6 +63,10 @@
             me.pagesCount = me.pagesCount();
             me.index = (me.settings.index >= 0 && me.settings.index < me.pagesCount) ? me.settings.index : 0;
 			
+            for(var i = 0; i < me.section.length; i++){
+                me.section.eq(i).attr("data-index", i); // 重要
+            }
+            
             if (!me.direction) {
                 me._initLayout()
             }
